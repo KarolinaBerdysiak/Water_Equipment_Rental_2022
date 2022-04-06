@@ -1,5 +1,10 @@
 package com.example.water_equipment_rental_2022.DTO;
 
+import lombok.Getter;
+import lombok.Setter;
+
+@Getter
+@Setter
 public class EquipmentDto {
 
     private Long id;
@@ -19,43 +24,4 @@ public class EquipmentDto {
     public EquipmentDto() {
     }
 
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    public String getType() {
-        return Type;
-    }
-
-    public void setType(String type) {
-        Type = type;
-    }
-
-    public String getSerialNumber() {
-        return serialNumber;
-    }
-
-    public void setSerialNumber(String serialNumber) {
-        this.serialNumber = serialNumber;
-    }
-
-    public double getHourPrice() {
-        return hourPrice;
-    }
-
-    public void setHourPrice(double hourPrice) {
-        this.hourPrice = hourPrice;
-    }
-
-    public double getDayPrice() {
-        return dayPrice;
-    }
-
-    public void setDayPrice(double dayPrice) {
-        this.dayPrice = dayPrice;
-    }
 }

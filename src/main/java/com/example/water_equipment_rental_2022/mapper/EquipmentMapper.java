@@ -18,6 +18,7 @@ public class EquipmentMapper {
         return equipment;
     }
 
+
     public static EquipmentDto map(Equipment equipment){
         EquipmentDto equipmentDto=new EquipmentDto();
         equipmentDto.setId(equipment.getId_equipment());

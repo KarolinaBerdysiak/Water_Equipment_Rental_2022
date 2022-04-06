@@ -1,7 +1,11 @@
 package com.example.water_equipment_rental_2022.DTO;
 
-import java.time.LocalDate;
+import lombok.Getter;
+import lombok.Setter;
 
+import java.time.LocalDate;
+@Getter
+@Setter
 public class InformationDto {
 
     private Long id;
@@ -19,35 +23,4 @@ public class InformationDto {
     public InformationDto() {
     }
 
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    public LocalDate getInformationDate() {
-        return informationDate;
-    }
-
-    public void setInformationDate(LocalDate informationDate) {
-        this.informationDate = informationDate;
-    }
-
-    public LocalDate getValidUntil() {
-        return validUntil;
-    }
-
-    public void setValidUntil(LocalDate validUntil) {
-        this.validUntil = validUntil;
-    }
-
-    public String getInformationMessage() {
-        return informationMessage;
-    }
-
-    public void setInformationMessage(String informationMessage) {
-        this.informationMessage = informationMessage;
-    }
 }

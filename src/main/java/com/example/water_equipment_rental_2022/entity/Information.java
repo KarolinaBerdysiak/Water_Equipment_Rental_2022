@@ -1,9 +1,13 @@
 package com.example.water_equipment_rental_2022.entity;
 
+import lombok.Getter;
+import lombok.Setter;
+
 import javax.persistence.*;
 import java.time.LocalDate;
-import java.util.Date;
 
+@Setter
+@Getter
 @Entity
 public class Information {
 
@@ -15,17 +19,10 @@ public class Information {
     private LocalDate validUntil;
     private String informationMessage;
 
-@ManyToOne(cascade = {CascadeType.MERGE,CascadeType.DETACH,CascadeType.REFRESH,CascadeType.PERSIST})
-@JoinColumn(name = "id_user")
+    @ManyToOne(cascade = {CascadeType.MERGE, CascadeType.DETACH, CascadeType.REFRESH, CascadeType.PERSIST})
+    @JoinColumn(name = "id_user")
     private User userInformation;
 
-    public User getUserInformation() {
-        return userInformation;
-    }
-
-    public void setUserInformation(User userInformation) {
-        this.userInformation = userInformation;
-    }
 
     public Information() {
     }
@@ -36,35 +33,4 @@ public class Information {
         this.informationMessage = informationMessage;
     }
 
-    public Long getId_information() {
-        return id_information;
-    }
-
-    public void setId_information(Long id_information) {
-        this.id_information = id_information;
-    }
-
-    public LocalDate getInformationDate() {
-        return informationDate;
-    }
-
-    public void setInformationDate(LocalDate informationDate) {
-        this.informationDate = informationDate;
-    }
-
-    public LocalDate getValidUntil() {
-        return validUntil;
-    }
-
-    public void setValidUntil(LocalDate validUntil) {
-        this.validUntil = validUntil;
-    }
-
-    public String getInformationMessage() {
-        return informationMessage;
-    }
-
-    public void setInformationMessage(String informationMessage) {
-        this.informationMessage = informationMessage;
-    }
 }

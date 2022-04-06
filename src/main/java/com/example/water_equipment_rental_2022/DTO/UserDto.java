@@ -1,9 +1,12 @@
 package com.example.water_equipment_rental_2022.DTO;
 
-import com.example.water_equipment_rental_2022.entity.Equipment;
+
+import lombok.Getter;
+import lombok.Setter;
 
 import java.util.List;
-
+@Getter
+@Setter
 public class UserDto {
 
     private Long id;
@@ -11,32 +14,26 @@ public class UserDto {
     private String name;
     private String personalId;
     private String phoneNumber;
-    private List<EquipmentDto>equipmentDtoList;
-    private List<InformationDto>informationDtoList;
+    private String email;
+    private String password;
+    private List<EquipmentDto> equipmentDtoList;
+    private List<InformationDto> informationDtoList;
 
     public List<InformationDto> getInformationDtoList() {
         return informationDtoList;
     }
 
-    public void setInformationDtoList(List<InformationDto> informationDtoList) {
-        this.informationDtoList = informationDtoList;
-    }
-
-    public List<EquipmentDto> getEquipmentDtoList() {
-        return equipmentDtoList;
-    }
-
-    public void setEquipmentDtoList(List<EquipmentDto> equipmentDtoList) {
-        this.equipmentDtoList = equipmentDtoList;
-    }
 
     public UserDto(Long id, String firstName, String name, String personalId, String phoneNumber,
+                   String email, String password,
                    List<EquipmentDto> equipmentDtoList, List<InformationDto> informationDtoList) {
         this.id = id;
         this.firstName = firstName;
         this.name = name;
         this.personalId = personalId;
         this.phoneNumber = phoneNumber;
+        this.email = email;
+        this.password = password;
         this.equipmentDtoList = equipmentDtoList;
         this.informationDtoList = informationDtoList;
     }
@@ -44,43 +41,10 @@ public class UserDto {
     public UserDto() {
     }
 
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    public String getFirstName() {
-        return firstName;
-    }
-
-    public void setFirstName(String firstName) {
+    public UserDto(String firstName, String name, String email, String password) {
         this.firstName = firstName;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
         this.name = name;
-    }
-
-    public String getPersonalId() {
-        return personalId;
-    }
-
-    public void setPersonalId(String personalId) {
-        this.personalId = personalId;
-    }
-
-    public String getPhoneNumber() {
-        return phoneNumber;
-    }
-
-    public void setPhoneNumber(String phoneNumber) {
-        this.phoneNumber = phoneNumber;
+        this.email = email;
+        this.password = password;
     }
 }

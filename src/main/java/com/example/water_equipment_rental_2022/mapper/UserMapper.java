@@ -13,7 +13,7 @@ public class UserMapper {
 
     public static User map(UserDto userDto){
         User user=new User();
-        user.setId_user(userDto.getId());
+        user.setId(userDto.getId());
         user.setFirst_name(userDto.getFirstName());
         user.setName(userDto.getName());
         user.setPersonal_id(userDto.getPersonalId());
@@ -23,7 +23,7 @@ public class UserMapper {
 
     public static UserDto map(User user){
         UserDto userDto=new UserDto();
-        userDto.setId(user.getId_user());
+        userDto.setId(user.getId());
         userDto.setFirstName(user.getFirst_name());
         userDto.setName(user.getName());
         userDto.setPersonalId(user.getPersonal_id());
