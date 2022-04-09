@@ -28,17 +28,20 @@ public class UserService implements UserServiceInterface{
 
     @Autowired
     private BCryptPasswordEncoder passwordEncoder;
-
-
-
     @Override
     public User save(UserDto registrationDto) {
-        User user = new User(registrationDto.getFirstName(),
-                registrationDto.getName(), registrationDto.getEmail(),
-                passwordEncoder.encode(registrationDto.getPassword()),
-                Arrays.asList(new Role("ROLE_USER")));
+       User user=new User();
+       user.setFirst_name(registrationDto.getFirstName());
+       user.setName(registrationDto.getName());
+       user.setEmail(registrationDto.getEmail());
+       user.setPassword(passwordEncoder.encode(registrationDto.getPassword()));
+       user.setRoles(Arrays.asList(new Role("ROLE_USER")));
 
         return userRepository.save(user);
+
+
+
+
     }
 
     @Override
