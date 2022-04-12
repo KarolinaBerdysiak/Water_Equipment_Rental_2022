@@ -14,20 +14,20 @@ public class UserMapper {
     public static User map(UserDto userDto){
         User user=new User();
         user.setId(userDto.getId());
-        user.setFirst_name(userDto.getFirstName());
+        user.setFirstName(userDto.getFirstName());
         user.setName(userDto.getName());
-        user.setPersonal_id(userDto.getPersonalId());
-        user.setPhone_number(userDto.getPhoneNumber());
+        user.setPersonalId(userDto.getPersonalId());
+        user.setPhoneNumber(userDto.getPhoneNumber());
         return user;
     }
 
     public static UserDto map(User user){
         UserDto userDto=new UserDto();
         userDto.setId(user.getId());
-        userDto.setFirstName(user.getFirst_name());
+        userDto.setFirstName(user.getFirstName());
         userDto.setName(user.getName());
-        userDto.setPersonalId(user.getPersonal_id());
-        userDto.setPhoneNumber(user.getPhone_number());
+        userDto.setPersonalId(user.getPersonalId());
+        userDto.setPhoneNumber(user.getPhoneNumber());
         userDto.setInformationDtoList(InformationMapper.map(user.getInformationList()));
         userDto.setEquipmentDtoList(EquipmentMapper.map(user.getEquipmentList()));
         return userDto;

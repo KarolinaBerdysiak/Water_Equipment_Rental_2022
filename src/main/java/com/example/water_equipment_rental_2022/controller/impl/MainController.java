@@ -1,4 +1,4 @@
-package com.example.water_equipment_rental_2022.controller;
+package com.example.water_equipment_rental_2022.controller.impl;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;

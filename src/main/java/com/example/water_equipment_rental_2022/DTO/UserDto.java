@@ -1,12 +1,16 @@
 package com.example.water_equipment_rental_2022.DTO;
 
 
+import lombok.AllArgsConstructor;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import java.util.List;
 @Getter
 @Setter
+@AllArgsConstructor
+@NoArgsConstructor
 public class UserDto {
 
     private Long id;
@@ -19,32 +23,8 @@ public class UserDto {
     private List<EquipmentDto> equipmentDtoList;
     private List<InformationDto> informationDtoList;
 
-    public List<InformationDto> getInformationDtoList() {
-        return informationDtoList;
-    }
 
 
-    public UserDto(Long id, String firstName, String name, String personalId, String phoneNumber,
-                   String email, String password,
-                   List<EquipmentDto> equipmentDtoList, List<InformationDto> informationDtoList) {
-        this.id = id;
-        this.firstName = firstName;
-        this.name = name;
-        this.personalId = personalId;
-        this.phoneNumber = phoneNumber;
-        this.email = email;
-        this.password = password;
-        this.equipmentDtoList = equipmentDtoList;
-        this.informationDtoList = informationDtoList;
-    }
 
-    public UserDto() {
-    }
 
-    public UserDto(String firstName, String name, String email, String password) {
-        this.firstName = firstName;
-        this.name = name;
-        this.email = email;
-        this.password = password;
     }
-}

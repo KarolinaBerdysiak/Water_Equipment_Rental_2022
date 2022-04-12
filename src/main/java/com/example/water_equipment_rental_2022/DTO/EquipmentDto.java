@@ -1,10 +1,14 @@
 package com.example.water_equipment_rental_2022.DTO;
 
+import lombok.AllArgsConstructor;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 @Getter
 @Setter
+@NoArgsConstructor
+@AllArgsConstructor
 public class EquipmentDto {
 
     private Long id;
@@ -13,15 +17,6 @@ public class EquipmentDto {
     private double hourPrice;
     private double dayPrice;
 
-    public EquipmentDto(Long id, String type, String serialNumber, double hourPrice, double dayPrice) {
-        this.id = id;
-        Type = type;
-        this.serialNumber = serialNumber;
-        this.hourPrice = hourPrice;
-        this.dayPrice = dayPrice;
-    }
 
-    public EquipmentDto() {
-    }
 
 }

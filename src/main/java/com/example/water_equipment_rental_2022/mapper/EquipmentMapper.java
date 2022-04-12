@@ -10,22 +10,22 @@ public class EquipmentMapper {
 
     public static Equipment map(EquipmentDto equipmentDto){
         Equipment equipment=new Equipment();
-        equipment.setId_equipment(equipmentDto.getId());
+        equipment.setIdEquipment(equipmentDto.getId());
         equipment.setType(equipmentDto.getType());
-        equipment.setSerial_number(equipmentDto.getSerialNumber());
-        equipment.setHour_price(equipmentDto.getHourPrice());
-        equipment.setDay_price(equipmentDto.getDayPrice());
+        equipment.setSerialNumber(equipmentDto.getSerialNumber());
+        equipment.setHourPrice(equipmentDto.getHourPrice());
+        equipment.setDayPrice(equipmentDto.getDayPrice());
         return equipment;
     }
 
 
     public static EquipmentDto map(Equipment equipment){
         EquipmentDto equipmentDto=new EquipmentDto();
-        equipmentDto.setId(equipment.getId_equipment());
+        equipmentDto.setId(equipment.getIdEquipment());
         equipmentDto.setType(equipment.getType());
-        equipmentDto.setSerialNumber(equipment.getSerial_number());
-        equipmentDto.setHourPrice(equipment.getHour_price());
-        equipmentDto.setDayPrice(equipment.getDay_price());
+        equipmentDto.setSerialNumber(equipment.getSerialNumber());
+        equipmentDto.setHourPrice(equipment.getHourPrice());
+        equipmentDto.setDayPrice(equipment.getDayPrice());
         return equipmentDto;
     }
 
