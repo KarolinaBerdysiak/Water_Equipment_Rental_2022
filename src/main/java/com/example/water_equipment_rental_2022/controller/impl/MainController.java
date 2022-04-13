@@ -13,5 +13,9 @@ public class MainController {
     String home(){
         return "index";
     }
+    @GetMapping("/admins")
+    String admin(){
+        return "admins";
+    }
 
 }
